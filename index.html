@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Shmup estilo Megamania — nave, ondas, energia. Desktop + Mobile.">
+<title>MEGAMANIA 8-BIT — Shmup Espacial</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="cabinet">
+  <div id="hud-top">
+    <div class="hud-block">
+      <span class="hud-label">SCORE</span>
+      <span id="score" class="hud-value">000000</span>
+    </div>
+    <div class="hud-block center">
+      <span id="fase" class="hud-value fase">FASE 1</span>
+      <span id="onda-nome" class="hud-label onda">HAMBÚRGUERES</span>
+    </div>
+    <div class="hud-block right">
+      <span class="hud-label">HI-SCORE</span>
+      <span id="hiscore" class="hud-value">000000</span>
+    </div>
+  </div>
+
+  <div id="canvas-wrap">
+    <canvas id="game" width="480" height="640"></canvas>
+    <div id="overlay">
+      <h1 id="overlay-title">MEGAMANIA<br><span>8-BIT</span></h1>
+      <p id="overlay-text">Toque ou pressione ESPAÇO<br>para começar</p>
+      <p class="hint">← → mover &nbsp;•&nbsp; ESPAÇO atirar<br>Mobile: ◀ ▶ + FIRE ou arraste</p>
+    </div>
+  </div>
+
+  <div id="hud-bottom">
+    <div id="lives">▲▲▲</div>
+    <div id="energy-wrap">
+      <span id="energy-label">ENERGY</span>
+      <div id="energy-bar"><div id="energy-fill"></div></div>
+    </div>
+    <div id="level-ind">Nv 1</div>
+  </div>
+
+  <div id="touch-controls">
+    <div class="tc-left">
+      <button id="btnLeft" aria-label="Esquerda">◀</button>
+      <button id="btnRight" aria-label="Direita">▶</button>
+    </div>
+    <div class="tc-right">
+      <button id="btnFire" aria-label="Atirar">FIRE</button>
+    </div>
+  </div>
+</div>
+<script src="js/sprites.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/input.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
